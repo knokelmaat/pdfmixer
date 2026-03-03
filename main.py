@@ -142,12 +142,6 @@ class Window(Adw.ApplicationWindow):
         pdf_filter.set_name("PDF documents")
         self.open_dialog.set_default_filter(pdf_filter)
 
-        documents_dir = GLib.get_user_special_dir(
-            GLib.UserDirectory.DIRECTORY_DOCUMENTS
-        )
-        if documents_dir:
-            self.open_dialog.set_initial_folder(Gio.File.new_for_path(documents_dir))
-
     def _init_save_dialog(self):
         self.save_dialog = Gtk.FileDialog()
         self.save_dialog.set_title("Choose a location to save.")
@@ -160,14 +154,6 @@ class Window(Adw.ApplicationWindow):
         pdf_filter.add_pattern("*.pdf")
         pdf_filter.set_name("PDF documents")
         self.save_dialog.set_default_filter(pdf_filter)
-
-        documents_dir = GLib.get_user_special_dir(
-            GLib.UserDirectory.DIRECTORY_DOCUMENTS
-        )
-        if documents_dir:
-            self.save_dialog.set_initial_folder(
-                self.input_folder or Gio.File.new_for_path(documents_dir)
-            )
 
     def _load_configuration(self):
         settings = self._config_handler.load_settings()
