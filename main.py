@@ -83,7 +83,6 @@ class Window(Adw.ApplicationWindow):
 
         self.set_title(title=TITLE)
         self.set_default_size(width=683, height=384)
-        self.set_size_request(width=683, height=384)
 
         adw_toolbar_view = Adw.ToolbarView.new()
         self.set_content(content=adw_toolbar_view)
