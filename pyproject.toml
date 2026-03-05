@@ -1,5 +1,5 @@
 [project]
-name = "pdf-mixer"
+name = "pdfpagepicker"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -11,6 +11,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "pillow>=12.1.1",
     "pygobject-stubs>=2.16.0",
     "pyinstaller>=6.19.0",
 ]

@@ -15,9 +15,9 @@ from gi.repository import Adw, Gio, GLib, Gtk
 
 Adw.init()
 
-TITLE = "Pdf Mixer"
+TITLE = "Pdf Page Picker"
 
-APP_ID = "me.proton.vda.christophe.pdfmixer"
+APP_ID = "me.proton.vda.christophe.pdfpagepicker"
 
 
 class ConfigHandler:

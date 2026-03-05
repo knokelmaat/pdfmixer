@@ -4,4 +4,4 @@ clean:
 
 .PHONY: build
 build:
-	uv run pyinstaller --windowed --name pdfmixer main.py
+	uv run pyinstaller --windowed --name "Pdf Page Picker" -i icon.png main.py
